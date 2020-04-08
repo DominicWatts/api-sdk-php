@@ -19,12 +19,12 @@ class ReturnUnitRejectTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'message' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'message' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

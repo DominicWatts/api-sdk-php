@@ -17,18 +17,18 @@ use Hitmeister\Component\Api\Transfers\ProductDataStatusTransfer;
  */
 class ProductDataStatusNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param string   $ean
-	 * 
-	 * @return ProductDataStatusTransfer|null
-	 */
-	public function get($ean)
-	{
-		$endpoint = new Get($this->getTransport());
-		$result = $this->performWithId($endpoint, $ean);
-		
-		return $result ? ProductDataStatusTransfer::make($result) : null;
-	}
+    /**
+     * @param string   $ean
+     *
+     * @return ProductDataStatusTransfer|null
+     */
+    public function get($ean)
+    {
+        $endpoint = new Get($this->getTransport());
+        $result = $this->performWithId($endpoint, $ean);
+        
+        return $result ? ProductDataStatusTransfer::make($result) : null;
+    }
 }

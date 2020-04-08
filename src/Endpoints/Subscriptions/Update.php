@@ -21,24 +21,24 @@ use Hitmeister\Component\Api\Transfers\SubscriptionUpdateTransfer;
  */
 class Update extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param SubscriptionUpdateTransfer $transfer
-	 */
-	public function setTransfer(SubscriptionUpdateTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param SubscriptionUpdateTransfer $transfer
+     */
+    public function setTransfer(SubscriptionUpdateTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'subscriptions/%d/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'subscriptions/%d/';
+    }
 }

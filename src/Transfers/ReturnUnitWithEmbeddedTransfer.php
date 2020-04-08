@@ -30,72 +30,72 @@ class ReturnUnitWithEmbeddedTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_return_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_return' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'note' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'item' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
-  ),
-  'return' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ReturnTransfer',
-  ),
-  'order_unit' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderUnitTransfer',
-  ),
-  'claim' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimTransfer',
-  ),
-  'tickets' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\TicketTransfer',
-  ),
-);
+        'id_return_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_return' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'note' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'item' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
+        ),
+        'return' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ReturnTransfer',
+        ),
+        'order_unit' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderUnitTransfer',
+        ),
+        'claim' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimTransfer',
+        ),
+        'tickets' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\TicketTransfer',
+        ),
+        );
         return $properties;
     }
 

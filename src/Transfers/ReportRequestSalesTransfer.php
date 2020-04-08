@@ -21,22 +21,22 @@ class ReportRequestSalesTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'ts_from' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_to' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'ts_from' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_to' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

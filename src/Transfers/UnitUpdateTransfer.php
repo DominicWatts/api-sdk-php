@@ -31,72 +31,72 @@ class UnitUpdateTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'condition' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'listing_price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'minimum_price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'amount' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_offer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'note' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_min' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_max' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'shipping_group' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'location' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'warehouse' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'reference_price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'condition' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'listing_price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'minimum_price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'amount' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_offer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'note' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_min' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_max' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'shipping_group' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'location' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'warehouse' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'reference_price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

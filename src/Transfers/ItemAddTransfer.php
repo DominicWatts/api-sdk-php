@@ -22,27 +22,27 @@ class ItemAddTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'title' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'description' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'manufacturer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'pictures' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-);
+        'title' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'description' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'manufacturer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'pictures' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        );
         return $properties;
     }
 

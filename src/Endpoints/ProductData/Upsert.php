@@ -22,24 +22,24 @@ use Hitmeister\Component\Api\Transfers\ProductDataTransfer;
  */
 class Upsert extends AbstractEndpoint implements IdAware
 {
-	use RequestPut;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPut;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param ProductDataTransfer $transfer
-	 */
-	public function setTransfer(ProductDataTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ProductDataTransfer $transfer
+     */
+    public function setTransfer(ProductDataTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'product-data/%s/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'product-data/%s/';
+    }
 }

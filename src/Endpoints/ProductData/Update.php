@@ -21,24 +21,24 @@ use Hitmeister\Component\Api\Transfers\ProductDataTransfer;
  */
 class Update extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param ProductDataTransfer $transfer
-	 */
-	public function setTransfer(ProductDataTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ProductDataTransfer $transfer
+     */
+    public function setTransfer(ProductDataTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'product-data/%d/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'product-data/%d/';
+    }
 }

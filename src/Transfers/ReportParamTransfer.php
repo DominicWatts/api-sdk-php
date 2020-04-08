@@ -20,17 +20,17 @@ class ReportParamTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'name' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'value' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'name' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'value' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

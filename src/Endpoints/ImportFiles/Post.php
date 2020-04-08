@@ -19,23 +19,23 @@ use Hitmeister\Component\Api\Transfers\ImportFileAddTransfer;
  */
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param ImportFileAddTransfer $transfer
-	 */
-	public function setTransfer(ImportFileAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ImportFileAddTransfer $transfer
+     */
+    public function setTransfer(ImportFileAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'import-files/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'import-files/';
+    }
 }

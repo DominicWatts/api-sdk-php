@@ -19,23 +19,23 @@ use Hitmeister\Component\Api\Transfers\WarehouseAddTransfer;
  */
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param WarehouseAddTransfer $transfer
-	 */
-	public function setTransfer(WarehouseAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param WarehouseAddTransfer $transfer
+     */
+    public function setTransfer(WarehouseAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'warehouses/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'warehouses/';
+    }
 }

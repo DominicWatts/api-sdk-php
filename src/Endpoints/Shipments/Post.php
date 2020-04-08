@@ -17,23 +17,23 @@ use Hitmeister\Component\Api\Transfers\OrderUnitShipmentTransfer;
  */
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param OrderUnitShipmentTransfer $transfer
-	 */
-	public function setTransfer(OrderUnitShipmentTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param OrderUnitShipmentTransfer $transfer
+     */
+    public function setTransfer(OrderUnitShipmentTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'shipments/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'shipments/';
+    }
 }

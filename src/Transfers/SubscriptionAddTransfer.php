@@ -21,22 +21,22 @@ class SubscriptionAddTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'callback_url' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'fallback_email' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'event_name' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'callback_url' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'fallback_email' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'event_name' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

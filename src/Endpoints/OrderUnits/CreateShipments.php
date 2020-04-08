@@ -19,24 +19,24 @@ use Hitmeister\Component\Api\Transfers\OrderUnitShipmentTransfer;
  */
 class CreateShipments extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param OrderUnitShipmentTransfer $transfer
-	 */
-	public function setTransfer(OrderUnitShipmentTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param OrderUnitShipmentTransfer $transfer
+     */
+    public function setTransfer(OrderUnitShipmentTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'order-units/%d/shipments/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'order-units/%d/shipments/';
+    }
 }

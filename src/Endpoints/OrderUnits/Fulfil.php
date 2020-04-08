@@ -19,15 +19,15 @@ use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
  */
 class Fulfil extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'order-units/%d/fulfil/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'order-units/%d/fulfil/';
+    }
 }

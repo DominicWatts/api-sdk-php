@@ -13,13 +13,13 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait BodyTransfer
 {
-	use TransferGetter;
+    use TransferGetter;
 
-	/**
-	 * @return array
-	 */
-	public function getBody()
-	{
-		return $this->transfer->toArray();
-	}
+    /**
+     * @return array
+     */
+    public function getBody()
+    {
+        return $this->transfer->toArray();
+    }
 }

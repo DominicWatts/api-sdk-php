@@ -23,32 +23,32 @@ class AttributeTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_attribute' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'name' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'title' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'is_multiple_allowed' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'type' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_attribute' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'name' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'title' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'is_multiple_allowed' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'type' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

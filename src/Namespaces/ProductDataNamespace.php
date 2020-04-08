@@ -21,72 +21,72 @@ use Hitmeister\Component\Api\Transfers\ProductDataTransfer;
  */
 class ProductDataNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param string $ean
-	 *
-	 * @return ProductDataTransfer|null
-	 */
-	public function get($ean)
-	{
-		$endpoint = new Get($this->getTransport());
-		$result = $this->performWithId($endpoint, $ean);
-		
-		return $result ? ProductDataTransfer::make($result) : null;
-	}
+    /**
+     * @param string $ean
+     *
+     * @return ProductDataTransfer|null
+     */
+    public function get($ean)
+    {
+        $endpoint = new Get($this->getTransport());
+        $result = $this->performWithId($endpoint, $ean);
+        
+        return $result ? ProductDataTransfer::make($result) : null;
+    }
 
-	/**
-	 * @param string              $ean
-	 * @param ProductDataTransfer $data
-	 *
-	 * @return string
-	 * @throws \Hitmeister\Component\Api\Exceptions\ServerException
-	 */
-	public function upsert($ean, ProductDataTransfer $data)
-	{
-		$endpoint = new Upsert($this->getTransport());
-		$endpoint->setId($ean);
-		$endpoint->setTransfer($data);
+    /**
+     * @param string              $ean
+     * @param ProductDataTransfer $data
+     *
+     * @return string
+     * @throws \Hitmeister\Component\Api\Exceptions\ServerException
+     */
+    public function upsert($ean, ProductDataTransfer $data)
+    {
+        $endpoint = new Upsert($this->getTransport());
+        $endpoint->setId($ean);
+        $endpoint->setTransfer($data);
 
-		$resultRequest = $endpoint->performRequest();
+        $resultRequest = $endpoint->performRequest();
 
-		return $resultRequest['status'] == 201;
-	}
+        return $resultRequest['status'] == 201;
+    }
 
-	/**
-	 * @param string              $id
-	 * @param ProductDataTransfer $data
-	 *
-	 * @return bool
-	 */
-	public function update($id, ProductDataTransfer $data)
-	{
-		$endpoint = new Update($this->getTransport());
-		$endpoint->setId($id);
-		$endpoint->setTransfer($data);
+    /**
+     * @param string              $id
+     * @param ProductDataTransfer $data
+     *
+     * @return bool
+     */
+    public function update($id, ProductDataTransfer $data)
+    {
+        $endpoint = new Update($this->getTransport());
+        $endpoint->setId($id);
+        $endpoint->setTransfer($data);
 
-		try {
-			$result = $endpoint->performRequest();
-		} catch (ResourceNotFoundException $e) {
-			return false;
-		}
+        try {
+            $result = $endpoint->performRequest();
+        } catch (ResourceNotFoundException $e) {
+            return false;
+        }
 
-		return $result['status'] == 204;
-	}
+        return $result['status'] == 204;
+    }
 
-	/**
-	 * @param string $ean
-	 * 
-	 * @return bool
-	 */
-	public function delete($ean)
-	{
-		$endpoint = new Delete($this->getTransport());
-		$endpoint->setId($ean);
+    /**
+     * @param string $ean
+     *
+     * @return bool
+     */
+    public function delete($ean)
+    {
+        $endpoint = new Delete($this->getTransport());
+        $endpoint->setId($ean);
 
-		$result = $endpoint->performRequest();
+        $result = $endpoint->performRequest();
 
-		return $result['status'] == 204;
-	}
+        return $result['status'] == 204;
+    }
 }

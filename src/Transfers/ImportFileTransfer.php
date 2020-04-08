@@ -31,72 +31,72 @@ class ImportFileTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_import_file' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'uri' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'type' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'note' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'total_lines' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'current_line' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_last_row_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_completed' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'error_count' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'product_feed_async_done' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_import_file' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'uri' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'type' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'note' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'total_lines' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'current_line' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_last_row_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_completed' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'error_count' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'product_feed_async_done' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

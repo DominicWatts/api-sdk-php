@@ -21,51 +21,51 @@ use Hitmeister\Component\Api\Transfers\OrderWithEmbeddedTransfer;
  */
 class OrdersNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param \DateTime|int|string $dateTimeFrom
-	 * @param \DateTime|int|string $dateTimeUpdatedFrom
-	 * @param int                  $limit
-	 * @param int                  $offset
-	 * @return Cursor|OrderSellerTransfer[]
-	 */
-	public function find($dateTimeFrom = null, $dateTimeUpdatedFrom = null, $limit = 30, $offset = 0)
-	{
-		return $this->buildFind()
-			->addDateTimeParam('ts_created:from', $dateTimeFrom)
-			->addDateTimeParam('ts_units_updated:from', $dateTimeUpdatedFrom)
-			->setLimit($limit)
-			->setOffset($offset)
-			->find();
-	}
+    /**
+     * @param \DateTime|int|string $dateTimeFrom
+     * @param \DateTime|int|string $dateTimeUpdatedFrom
+     * @param int                  $limit
+     * @param int                  $offset
+     * @return Cursor|OrderSellerTransfer[]
+     */
+    public function find($dateTimeFrom = null, $dateTimeUpdatedFrom = null, $limit = 30, $offset = 0)
+    {
+        return $this->buildFind()
+            ->addDateTimeParam('ts_created:from', $dateTimeFrom)
+            ->addDateTimeParam('ts_units_updated:from', $dateTimeUpdatedFrom)
+            ->setLimit($limit)
+            ->setOffset($offset)
+            ->find();
+    }
 
-	/**
-	 * @return FindBuilder
-	 */
-	public function buildFind()
-	{
-		$endpoint = new Find($this->getTransport());
-		return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\OrderSellerTransfer');
-	}
+    /**
+     * @return FindBuilder
+     */
+    public function buildFind()
+    {
+        $endpoint = new Find($this->getTransport());
+        return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\OrderSellerTransfer');
+    }
 
-	/**
-	 * @param int   $id
-	 * @param array $embedded
-	 * @return OrderWithEmbeddedTransfer|null
-	 */
-	public function get($id, array $embedded = [])
-	{
-		$endpoint = new Get($this->getTransport());
+    /**
+     * @param int   $id
+     * @param array $embedded
+     * @return OrderWithEmbeddedTransfer|null
+     */
+    public function get($id, array $embedded = [])
+    {
+        $endpoint = new Get($this->getTransport());
 
-		// Ask for embedded fields
-		if (!empty($embedded)) {
-			$endpoint->setParams([
-				'embedded' => $embedded,
-			]);
-		}
+        // Ask for embedded fields
+        if (!empty($embedded)) {
+            $endpoint->setParams([
+                'embedded' => $embedded,
+            ]);
+        }
 
-		$result = $this->performWithId($endpoint, $id);
-		return $result ? OrderWithEmbeddedTransfer::make($result) : null;
-	}
+        $result = $this->performWithId($endpoint, $id);
+        return $result ? OrderWithEmbeddedTransfer::make($result) : null;
+    }
 }

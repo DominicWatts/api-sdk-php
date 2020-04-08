@@ -19,27 +19,27 @@ use Hitmeister\Component\Api\Transfers\ShipmentInformationTransfer;
  */
 class ShipmentsNamespace extends AbstractNamespace
 {
-	/**
-	 * @param string $orderUnitId
-	 * @param string $carrierCode
-	 * @param string $trackingNumber
-	 * @return int
-	 * @throws ServerException
-	 */
-	public function post($orderUnitId, $carrierCode, $trackingNumber)
-	{
-		$shipmentInformation = new ShipmentInformationTransfer();
-		$shipmentInformation->carrier_code = $carrierCode;
-		$shipmentInformation->tracking_number = $trackingNumber;
+    /**
+     * @param string $orderUnitId
+     * @param string $carrierCode
+     * @param string $trackingNumber
+     * @return int
+     * @throws ServerException
+     */
+    public function post($orderUnitId, $carrierCode, $trackingNumber)
+    {
+        $shipmentInformation = new ShipmentInformationTransfer();
+        $shipmentInformation->carrier_code = $carrierCode;
+        $shipmentInformation->tracking_number = $trackingNumber;
 
-		$data = new OrderUnitShipmentTransfer();
-		$data->id_order_unit = $orderUnitId;
-		$data->shipment_information = $shipmentInformation;
+        $data = new OrderUnitShipmentTransfer();
+        $data->id_order_unit = $orderUnitId;
+        $data->shipment_information = $shipmentInformation;
 
-		$endpoint = new Post($this->getTransport());
-		$endpoint->setTransfer($data);
-		$resultRequest = $endpoint->performRequest();
+        $endpoint = new Post($this->getTransport());
+        $endpoint->setTransfer($data);
+        $resultRequest = $endpoint->performRequest();
 
-		return Response::extractId($resultRequest, '/shipments/%d/');
-	}
+        return Response::extractId($resultRequest, '/shipments/%d/');
+    }
 }

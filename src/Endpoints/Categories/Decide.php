@@ -10,23 +10,23 @@ use Hitmeister\Component\Api\Transfers\CategoryDecideTransfer;
 
 class Decide extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param CategoryDecideTransfer $transfer
-	 */
-	public function setTransfer(CategoryDecideTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param CategoryDecideTransfer $transfer
+     */
+    public function setTransfer(CategoryDecideTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'categories/decide/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'categories/decide/';
+    }
 }

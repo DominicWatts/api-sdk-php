@@ -10,23 +10,23 @@ use Hitmeister\Component\Api\Transfers\TicketMessageAddTransfer;
 
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param TicketMessageAddTransfer $transfer
-	 */
-	public function setTransfer(TicketMessageAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param TicketMessageAddTransfer $transfer
+     */
+    public function setTransfer(TicketMessageAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'ticket-messages/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'ticket-messages/';
+    }
 }

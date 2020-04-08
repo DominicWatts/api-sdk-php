@@ -15,53 +15,53 @@ use GuzzleHttp\Ring\Future\FutureArrayInterface;
  */
 class Transport
 {
-	/** @var callable */
-	private $handler;
+    /** @var callable */
+    private $handler;
 
-	/** @var RequestBuilder */
-	private $requestBuilder;
+    /** @var RequestBuilder */
+    private $requestBuilder;
 
-	/**
-	 * @param callable       $handler
-	 * @param RequestBuilder $requestBuilder
-	 */
-	public function __construct(callable $handler, RequestBuilder $requestBuilder)
-	{
-		$this->handler = $handler;
-		$this->requestBuilder = $requestBuilder;
-	}
+    /**
+     * @param callable       $handler
+     * @param RequestBuilder $requestBuilder
+     */
+    public function __construct(callable $handler, RequestBuilder $requestBuilder)
+    {
+        $this->handler = $handler;
+        $this->requestBuilder = $requestBuilder;
+    }
 
-	/**
-	 * @param string     $method
-	 * @param string     $uri
-	 * @param null|array $params
-	 * @param mixed      $body
-	 * @param array      $options
-	 * @return mixed
-	 */
-	public function performRequest($method, $uri, $params = null, $body = null, array $options = [])
-	{
-		// Basic request
-		$request = $this->requestBuilder->build($method, $uri, $params);
+    /**
+     * @param string     $method
+     * @param string     $uri
+     * @param null|array $params
+     * @param mixed      $body
+     * @param array      $options
+     * @return mixed
+     */
+    public function performRequest($method, $uri, $params = null, $body = null, array $options = [])
+    {
+        // Basic request
+        $request = $this->requestBuilder->build($method, $uri, $params);
 
-		// Build body
-		if (isset($body)) {
-			$request['body'] = json_encode($body);
-		}
+        // Build body
+        if (isset($body)) {
+            $request['body'] = json_encode($body);
+        }
 
-		// To be able to change some options
-		$request = array_merge_recursive($request, $options);
+        // To be able to change some options
+        $request = array_merge_recursive($request, $options);
 
-		// Run
-		$handler = $this->handler;
-		$result = $handler($request);
+        // Run
+        $handler = $this->handler;
+        $result = $handler($request);
 
-		if ($result instanceof FutureArrayInterface) {
-			do {
-				$result = $result->wait();
-			} while ($result instanceof FutureArrayInterface);
-		}
+        if ($result instanceof FutureArrayInterface) {
+            do {
+                $result = $result->wait();
+            } while ($result instanceof FutureArrayInterface);
+        }
 
-		return $result;
-	}
+        return $result;
+    }
 }

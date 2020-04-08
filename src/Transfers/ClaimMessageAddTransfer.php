@@ -21,22 +21,22 @@ class ClaimMessageAddTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_claim' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'text' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'interim_notice' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_claim' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'text' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'interim_notice' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

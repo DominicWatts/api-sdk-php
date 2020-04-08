@@ -20,17 +20,17 @@ class BuyerTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_buyer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'email' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_buyer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'email' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

@@ -12,20 +12,20 @@ use Hitmeister\Component\Api\Endpoints\Traits\BodyTransfer;
 
 class Upsert extends AbstractEndpoint implements IdAware
 {
-	use UriPatternId;
-	use RequestPut;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use UriPatternId;
+    use RequestPut;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	public function setTransfer(OrderUnitReturnTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'returns/%d/';
-	}
+    public function setTransfer(OrderUnitReturnTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'returns/%d/';
+    }
 }

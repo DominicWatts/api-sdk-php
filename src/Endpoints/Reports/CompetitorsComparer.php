@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Reports;
  */
 class CompetitorsComparer extends Post
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'reports/competitors-comparer/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'reports/competitors-comparer/';
+    }
 }

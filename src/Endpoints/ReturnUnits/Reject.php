@@ -21,24 +21,24 @@ use Hitmeister\Component\Api\Transfers\ReturnUnitRejectTransfer;
  */
 class Reject extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param ReturnUnitRejectTransfer $transfer
-	 */
-	public function setTransfer(ReturnUnitRejectTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ReturnUnitRejectTransfer $transfer
+     */
+    public function setTransfer(ReturnUnitRejectTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'return-units/%d/reject/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'return-units/%d/reject/';
+    }
 }

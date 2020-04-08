@@ -23,33 +23,33 @@ class ReportTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_report' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'date_requested' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'url' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'params' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ReportParamTransfer',
-  ),
-);
+        'id_report' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'date_requested' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'url' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'params' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ReportParamTransfer',
+        ),
+        );
         return $properties;
     }
 

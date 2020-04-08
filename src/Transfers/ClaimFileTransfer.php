@@ -21,22 +21,22 @@ class ClaimFileTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'filename' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'uri' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'filename' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'uri' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

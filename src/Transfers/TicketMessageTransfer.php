@@ -23,33 +23,33 @@ class TicketMessageTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_ticket_message' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_ticket' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'author' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\TicketMessageAuthorTransfer',
-  ),
-  'text' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_ticket_message' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_ticket' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'author' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\TicketMessageAuthorTransfer',
+        ),
+        'text' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

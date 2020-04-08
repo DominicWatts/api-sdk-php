@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait RequestPost
 {
-	/**
-	 * @return string
-	 */
-	public function getMethod()
-	{
-		return 'POST';
-	}
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return 'POST';
+    }
 }

@@ -22,28 +22,28 @@ class TicketMessageAddTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_ticket' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'text' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'interim_notice' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'claim_message_files' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\MessageClaimFileTransfer',
-  ),
-);
+        'id_ticket' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'text' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'interim_notice' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'claim_message_files' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\MessageClaimFileTransfer',
+        ),
+        );
         return $properties;
     }
 

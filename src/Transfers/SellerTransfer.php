@@ -19,12 +19,12 @@ class SellerTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'pseudonym' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'pseudonym' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

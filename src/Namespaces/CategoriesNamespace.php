@@ -26,78 +26,78 @@ use Hitmeister\Component\Api\Transfers\CategoryWithEmbeddedTransfer;
  */
 class CategoriesNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param string $q
-	 * @param int    $idParent
-	 * @param int    $limit
-	 * @param int    $offset
-	 * @return Cursor|CategoryTransfer[]
-	 */
-	public function find($q = null, $idParent = null, $limit = 100, $offset = 0)
-	{
-		return $this->buildFind()
-			->addParam('q', $q)
-			->addParam('id_parent', $idParent)
-			->setLimit($limit)
-			->setOffset($offset)
-			->find();
-	}
+    /**
+     * @param string $q
+     * @param int    $idParent
+     * @param int    $limit
+     * @param int    $offset
+     * @return Cursor|CategoryTransfer[]
+     */
+    public function find($q = null, $idParent = null, $limit = 100, $offset = 0)
+    {
+        return $this->buildFind()
+            ->addParam('q', $q)
+            ->addParam('id_parent', $idParent)
+            ->setLimit($limit)
+            ->setOffset($offset)
+            ->find();
+    }
 
-	/**
-	 * @return FindBuilder
-	 */
-	public function buildFind()
-	{
-		$endpoint = new Find($this->getTransport());
-		return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\CategoryTransfer');
-	}
+    /**
+     * @return FindBuilder
+     */
+    public function buildFind()
+    {
+        $endpoint = new Find($this->getTransport());
+        return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\CategoryTransfer');
+    }
 
-	/**
-	 * @param array|CategoryDecideTransfer $data
-	 * @return array|CategoryTransfer[]
-	 */
-	public function decide($data)
-	{
-		if (!$data instanceof CategoryDecideTransfer) {
-			if (!is_array($data)) {
-				throw new InvalidArgumentException('Data argument should be an array of instance of CategoryDecideTransfer');
-			}
-			$data = CategoryDecideTransfer::make($data);
-		}
+    /**
+     * @param array|CategoryDecideTransfer $data
+     * @return array|CategoryTransfer[]
+     */
+    public function decide($data)
+    {
+        if (!$data instanceof CategoryDecideTransfer) {
+            if (!is_array($data)) {
+                throw new InvalidArgumentException('Data argument should be an array of instance of CategoryDecideTransfer');
+            }
+            $data = CategoryDecideTransfer::make($data);
+        }
 
-		$endpoint = new Decide($this->getTransport());
-		$endpoint->setTransfer($data);
+        $endpoint = new Decide($this->getTransport());
+        $endpoint->setTransfer($data);
 
-		$resultRequest = $endpoint->performRequest();
-		Response::checkBody($resultRequest);
+        $resultRequest = $endpoint->performRequest();
+        Response::checkBody($resultRequest);
 
-		$result = [];
-		foreach ($resultRequest['json'] as $item) {
-			$result[] = CategoryTransfer::make($item);
-		}
+        $result = [];
+        foreach ($resultRequest['json'] as $item) {
+            $result[] = CategoryTransfer::make($item);
+        }
 
-		return $result;
-	}
+        return $result;
+    }
 
-	/**
-	 * @param int   $id
-	 * @param array $embedded
-	 * @return CategoryWithEmbeddedTransfer|null
-	 */
-	public function get($id, array $embedded = [])
-	{
-		$endpoint = new Get($this->getTransport());
+    /**
+     * @param int   $id
+     * @param array $embedded
+     * @return CategoryWithEmbeddedTransfer|null
+     */
+    public function get($id, array $embedded = [])
+    {
+        $endpoint = new Get($this->getTransport());
 
-		// Ask for embedded fields
-		if (!empty($embedded)) {
-			$endpoint->setParams([
-				'embedded' => $embedded,
-			]);
-		}
+        // Ask for embedded fields
+        if (!empty($embedded)) {
+            $endpoint->setParams([
+                'embedded' => $embedded,
+            ]);
+        }
 
-		$result = $this->performWithId($endpoint, $id);
-		return $result ? CategoryWithEmbeddedTransfer::make($result) : null;
-	}
+        $result = $this->performWithId($endpoint, $id);
+        return $result ? CategoryWithEmbeddedTransfer::make($result) : null;
+    }
 }

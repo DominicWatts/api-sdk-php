@@ -23,11 +23,11 @@ class Repair extends AbstractEndpoint implements IdAware
     use UriPatternId;
     use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'return-units/%d/repair/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'return-units/%d/repair/';
+    }
 }

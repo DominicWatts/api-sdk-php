@@ -24,37 +24,37 @@ class WarehouseAddressTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'street' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'house_number' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'postcode' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'city' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'country' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'phone' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'street' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'house_number' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'postcode' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'city' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'country' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'phone' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

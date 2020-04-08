@@ -24,37 +24,37 @@ class ReturnTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_return' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'tracking_provider' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'tracking_code' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_return' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'tracking_provider' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'tracking_code' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

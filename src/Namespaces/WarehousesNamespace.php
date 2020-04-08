@@ -27,95 +27,95 @@ use Hitmeister\Component\Api\Transfers\WarehouseUpdateTransfer;
  */
 class WarehousesNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param int $limit
-	 * @param int $offset
-	 *
-	 * @return Cursor|WarehouseTransfer[]
-	 */
-	public function find($limit = 20, $offset = 0)
-	{
-		return $this->buildFind()
-			->setLimit($limit)
-			->setOffset($offset)
-			->find();
-	}
+    /**
+     * @param int $limit
+     * @param int $offset
+     *
+     * @return Cursor|WarehouseTransfer[]
+     */
+    public function find($limit = 20, $offset = 0)
+    {
+        return $this->buildFind()
+            ->setLimit($limit)
+            ->setOffset($offset)
+            ->find();
+    }
 
-	/**
-	 * @return FindBuilder
-	 */
-	public function buildFind()
-	{
-		$endpoint = new Find($this->getTransport());
-		return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\WarehouseTransfer');
-	}
+    /**
+     * @return FindBuilder
+     */
+    public function buildFind()
+    {
+        $endpoint = new Find($this->getTransport());
+        return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\WarehouseTransfer');
+    }
 
-	/**
-	 * @param int $id
-	 * @return WarehouseTransfer|null
-	 */
-	public function get($id)
-	{
-		$endpoint = new Get($this->getTransport());
-		$result = $this->performWithId($endpoint, $id);
-		return $result ? WarehouseTransfer::make($result) : null;
-	}
+    /**
+     * @param int $id
+     * @return WarehouseTransfer|null
+     */
+    public function get($id)
+    {
+        $endpoint = new Get($this->getTransport());
+        $result = $this->performWithId($endpoint, $id);
+        return $result ? WarehouseTransfer::make($result) : null;
+    }
 
-	/**
-	 * @param WarehouseAddTransfer $data
-	 *
-	 * @return int
-	 * @throws \Hitmeister\Component\Api\Exceptions\ServerException
-	 *
-	 */
-	public function post(WarehouseAddTransfer $data)
-	{
-		$endpoint = new Post($this->getTransport());
-		$endpoint->setTransfer($data);
+    /**
+     * @param WarehouseAddTransfer $data
+     *
+     * @return int
+     * @throws \Hitmeister\Component\Api\Exceptions\ServerException
+     *
+     */
+    public function post(WarehouseAddTransfer $data)
+    {
+        $endpoint = new Post($this->getTransport());
+        $endpoint->setTransfer($data);
 
-		$resultRequest = $endpoint->performRequest();
+        $resultRequest = $endpoint->performRequest();
 
-		return Response::extractId($resultRequest, '/warehouses/%d/');
-	}
+        return Response::extractId($resultRequest, '/warehouses/%d/');
+    }
 
-	/**
-	 * @param int                     $id
-	 * @param WarehouseUpdateTransfer $data
-	 *
-	 * @return bool
-	 */
-	public function update($id, WarehouseUpdateTransfer $data)
-	{
-		$endpoint = new Update($this->getTransport());
-		$endpoint->setId($id);
-		$endpoint->setTransfer($data);
+    /**
+     * @param int                     $id
+     * @param WarehouseUpdateTransfer $data
+     *
+     * @return bool
+     */
+    public function update($id, WarehouseUpdateTransfer $data)
+    {
+        $endpoint = new Update($this->getTransport());
+        $endpoint->setId($id);
+        $endpoint->setTransfer($data);
 
-		try {
-			$result = $endpoint->performRequest();
-		} catch (ResourceNotFoundException $e) {
-			return false;
-		}
+        try {
+            $result = $endpoint->performRequest();
+        } catch (ResourceNotFoundException $e) {
+            return false;
+        }
 
-		return $result['status'] == 204;
-	}
+        return $result['status'] == 204;
+    }
 
-	/**
-	 * @param int $id
-	 * @return bool
-	 */
-	public function delete($id)
-	{
-		$endpoint = new Delete($this->getTransport());
-		$endpoint->setId($id);
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function delete($id)
+    {
+        $endpoint = new Delete($this->getTransport());
+        $endpoint->setId($id);
 
-		try {
-			$result = $endpoint->performRequest();
-		} catch (ResourceNotFoundException $e) {
-			return false;
-		}
+        try {
+            $result = $endpoint->performRequest();
+        } catch (ResourceNotFoundException $e) {
+            return false;
+        }
 
-		return $result['status'] == 204;
-	}
+        return $result['status'] == 204;
+    }
 }

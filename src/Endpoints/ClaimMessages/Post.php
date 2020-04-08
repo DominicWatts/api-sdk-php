@@ -19,23 +19,23 @@ use Hitmeister\Component\Api\Transfers\ClaimMessageAddTransfer;
  */
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param ClaimMessageAddTransfer $transfer
-	 */
-	public function setTransfer(ClaimMessageAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ClaimMessageAddTransfer $transfer
+     */
+    public function setTransfer(ClaimMessageAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'claim-messages/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'claim-messages/';
+    }
 }

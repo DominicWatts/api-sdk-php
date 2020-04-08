@@ -20,17 +20,17 @@ class AdditionalAttributeTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'attribute' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'value' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-);
+        'attribute' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'value' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        );
         return $properties;
     }
 

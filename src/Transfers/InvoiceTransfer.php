@@ -23,32 +23,32 @@ class InvoiceTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_invoice' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'number' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'url' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'type' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_invoice' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'number' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'url' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'type' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

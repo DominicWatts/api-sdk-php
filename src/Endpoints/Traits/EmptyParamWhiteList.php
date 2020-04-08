@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait EmptyParamWhiteList
 {
-	/**
-	 * @return array
-	 */
-	public function getParamWhiteList()
-	{
-		return [];
-	}
+    /**
+     * @return array
+     */
+    public function getParamWhiteList()
+    {
+        return [];
+    }
 }

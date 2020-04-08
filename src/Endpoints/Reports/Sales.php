@@ -16,21 +16,21 @@ use Hitmeister\Component\Api\Transfers\ReportRequestSalesTransfer;
  */
 class Sales extends Post
 {
-	use BodyTransfer;
+    use BodyTransfer;
 
-	/**
-	 * @param ReportRequestSalesTransfer $transfer
-	 */
-	public function setTransfer(ReportRequestSalesTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ReportRequestSalesTransfer $transfer
+     */
+    public function setTransfer(ReportRequestSalesTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'reports/sales/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'reports/sales/';
+    }
 }

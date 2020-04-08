@@ -15,22 +15,22 @@ use Hitmeister\Component\Api\Transport\Transport;
  */
 abstract class AbstractNamespace
 {
-	/** @var Transport */
-	private $transport;
+    /** @var Transport */
+    private $transport;
 
-	/**
-	 * @param Transport $transport
-	 */
-	public function __construct(Transport $transport)
-	{
-		$this->transport = $transport;
-	}
+    /**
+     * @param Transport $transport
+     */
+    public function __construct(Transport $transport)
+    {
+        $this->transport = $transport;
+    }
 
-	/**
-	 * @return Transport
-	 */
-	public function getTransport()
-	{
-		return $this->transport;
-	}
+    /**
+     * @return Transport
+     */
+    public function getTransport()
+    {
+        return $this->transport;
+    }
 }

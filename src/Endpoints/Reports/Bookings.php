@@ -16,21 +16,21 @@ use Hitmeister\Component\Api\Transfers\ReportRequestBookingsTransfer;
  */
 class Bookings extends Post
 {
-	use BodyTransfer;
+    use BodyTransfer;
 
-	/**
-	 * @param ReportRequestBookingsTransfer $transfer
-	 */
-	public function setTransfer(ReportRequestBookingsTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ReportRequestBookingsTransfer $transfer
+     */
+    public function setTransfer(ReportRequestBookingsTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'reports/bookings/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'reports/bookings/';
+    }
 }

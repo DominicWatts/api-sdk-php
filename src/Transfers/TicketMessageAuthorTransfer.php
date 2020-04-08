@@ -20,17 +20,17 @@ class TicketMessageAuthorTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'role' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'name' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'role' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'name' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

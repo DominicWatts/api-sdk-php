@@ -10,17 +10,17 @@ use Hitmeister\Component\Api\Transfers\OrderUnitReturnTransfer;
 
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	public function setTransfer(OrderUnitReturnTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    public function setTransfer(OrderUnitReturnTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	public function getURI()
-	{
-		return 'returns/';
-	}
+    public function getURI()
+    {
+        return 'returns/';
+    }
 }

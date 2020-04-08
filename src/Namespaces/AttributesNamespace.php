@@ -17,16 +17,16 @@ use Hitmeister\Component\Api\Transfers\AttributeTransfer;
  */
 class AttributesNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param int $id
-	 * @return AttributeTransfer|null
-	 */
-	public function get($id)
-	{
-		$endpoint = new Get($this->getTransport());
-		$result = $this->performWithId($endpoint, $id);
-		return $result ? AttributeTransfer::make($result) : null;
-	}
+    /**
+     * @param int $id
+     * @return AttributeTransfer|null
+     */
+    public function get($id)
+    {
+        $endpoint = new Get($this->getTransport());
+        $result = $this->performWithId($endpoint, $id);
+        return $result ? AttributeTransfer::make($result) : null;
+    }
 }

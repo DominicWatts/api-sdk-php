@@ -37,290 +37,290 @@ use Hitmeister\Component\Api\Transport\Transport;
  */
 class Client
 {
-	const VERSION = '1.35.1';
+    const VERSION = '1.35.1';
 
-	/** @var Transport */
-	private $transport;
+    /** @var Transport */
+    private $transport;
 
-	/** @var AttributesNamespace */
-	private $attributesNs;
+    /** @var AttributesNamespace */
+    private $attributesNs;
 
-	/** @var CategoriesNamespace */
-	private $categoriesNs;
+    /** @var CategoriesNamespace */
+    private $categoriesNs;
 
-	/** @var ClaimMessagesNamespace */
-	private $claimMessagesNs;
+    /** @var ClaimMessagesNamespace */
+    private $claimMessagesNs;
 
-	/** @var ClaimsNamespace */
-	private $claimsNs;
+    /** @var ClaimsNamespace */
+    private $claimsNs;
 
-	/** @var ImportFilesNamespace */
-	private $importFilesNs;
+    /** @var ImportFilesNamespace */
+    private $importFilesNs;
 
-	/** @var ItemsNamespace */
-	private $itemsNs;
+    /** @var ItemsNamespace */
+    private $itemsNs;
 
-	/** @var OrdersNamespace */
-	private $ordersNs;
+    /** @var OrdersNamespace */
+    private $ordersNs;
 
-	/** @var OrderInvoicesNamespace */
-	private $orderInvoicesNs;
+    /** @var OrderInvoicesNamespace */
+    private $orderInvoicesNs;
 
-	/** @var OrderUnitsNamespace */
-	private $orderUnitsNs;
+    /** @var OrderUnitsNamespace */
+    private $orderUnitsNs;
 
-	/** @var ProductDataNamespace */
-	private $productDataNs;
+    /** @var ProductDataNamespace */
+    private $productDataNs;
 
-	/** @var ProductDataStatusNamespace */
-	private $productDataStatusNs;
+    /** @var ProductDataStatusNamespace */
+    private $productDataStatusNs;
 
-	/** @var ReportsNamespace */
-	private $reportsNs;
+    /** @var ReportsNamespace */
+    private $reportsNs;
 
-	/** @var ReturnsNamespace */
-	private $returnsNs;
+    /** @var ReturnsNamespace */
+    private $returnsNs;
 
-	/** @var ReturnUnitsNamespace */
-	private $returnUnitsNs;
+    /** @var ReturnUnitsNamespace */
+    private $returnUnitsNs;
 
-	/** @var ShipmentsNamespace */
-	private $shipmentsNs;
+    /** @var ShipmentsNamespace */
+    private $shipmentsNs;
 
-	/** @var ShippingGroupsNamespace */
-	private $shippingGroupsNs;
+    /** @var ShippingGroupsNamespace */
+    private $shippingGroupsNs;
 
-	/** @var StatusNamespace */
-	private $statusNs;
+    /** @var StatusNamespace */
+    private $statusNs;
 
-	/** @var SubscriptionsNamespace */
-	private $subscriptionsNs;
+    /** @var SubscriptionsNamespace */
+    private $subscriptionsNs;
 
-	/** @var TicketMessagesNamespace */
-	private $ticketMessagesNs;
+    /** @var TicketMessagesNamespace */
+    private $ticketMessagesNs;
 
-	/** @var TicketsNamespace */
-	private $ticketsNs;
+    /** @var TicketsNamespace */
+    private $ticketsNs;
 
-	/** @var WarehousesNamespace */
-	private $warehousesNs;
+    /** @var WarehousesNamespace */
+    private $warehousesNs;
 
-	/** @var UnitsNamespace */
-	private $unitsNs;
+    /** @var UnitsNamespace */
+    private $unitsNs;
 
-	/**
-	 * @param Transport $transport
-	 */
-	public function __construct(Transport $transport)
-	{
-		$this->transport = $transport;
+    /**
+     * @param Transport $transport
+     */
+    public function __construct(Transport $transport)
+    {
+        $this->transport = $transport;
 
-		// Namespaces
-		$this->attributesNs = new AttributesNamespace($this->transport);
-		$this->categoriesNs = new CategoriesNamespace($this->transport);
-		$this->claimMessagesNs = new ClaimMessagesNamespace($this->transport);
-		$this->claimsNs = new ClaimsNamespace($this->transport);
-		$this->importFilesNs = new ImportFilesNamespace($this->transport);
-		$this->itemsNs = new ItemsNamespace($this->transport);
-		$this->ordersNs = new OrdersNamespace($this->transport);
-		$this->orderInvoicesNs = new OrderInvoicesNamespace($this->transport);
-		$this->orderUnitsNs = new OrderUnitsNamespace($this->transport);
-		$this->productDataNs = new ProductDataNamespace($this->transport);
-		$this->productDataStatusNs = new ProductDataStatusNamespace($this->transport);
-		$this->reportsNs = new ReportsNamespace($this->transport);
-		$this->returnsNs = new ReturnsNamespace($this->transport);
-		$this->returnUnitsNs = new ReturnUnitsNamespace($this->transport);
-		$this->shipmentsNs = new ShipmentsNamespace($this->transport);
-		$this->shippingGroupsNs = new ShippingGroupsNamespace($this->transport);
-		$this->statusNs = new StatusNamespace($this->transport);
-		$this->subscriptionsNs = new SubscriptionsNamespace($this->transport);
-		$this->ticketMessagesNs = new TicketMessagesNamespace($this->transport);
-		$this->ticketsNs = new TicketsNamespace($this->transport);
-		$this->warehousesNs = new WarehousesNamespace($this->transport);
-		$this->unitsNs = new UnitsNamespace($this->transport);
-	}
+        // Namespaces
+        $this->attributesNs = new AttributesNamespace($this->transport);
+        $this->categoriesNs = new CategoriesNamespace($this->transport);
+        $this->claimMessagesNs = new ClaimMessagesNamespace($this->transport);
+        $this->claimsNs = new ClaimsNamespace($this->transport);
+        $this->importFilesNs = new ImportFilesNamespace($this->transport);
+        $this->itemsNs = new ItemsNamespace($this->transport);
+        $this->ordersNs = new OrdersNamespace($this->transport);
+        $this->orderInvoicesNs = new OrderInvoicesNamespace($this->transport);
+        $this->orderUnitsNs = new OrderUnitsNamespace($this->transport);
+        $this->productDataNs = new ProductDataNamespace($this->transport);
+        $this->productDataStatusNs = new ProductDataStatusNamespace($this->transport);
+        $this->reportsNs = new ReportsNamespace($this->transport);
+        $this->returnsNs = new ReturnsNamespace($this->transport);
+        $this->returnUnitsNs = new ReturnUnitsNamespace($this->transport);
+        $this->shipmentsNs = new ShipmentsNamespace($this->transport);
+        $this->shippingGroupsNs = new ShippingGroupsNamespace($this->transport);
+        $this->statusNs = new StatusNamespace($this->transport);
+        $this->subscriptionsNs = new SubscriptionsNamespace($this->transport);
+        $this->ticketMessagesNs = new TicketMessagesNamespace($this->transport);
+        $this->ticketsNs = new TicketsNamespace($this->transport);
+        $this->warehousesNs = new WarehousesNamespace($this->transport);
+        $this->unitsNs = new UnitsNamespace($this->transport);
+    }
 
-	/**
-	 * @return Transport
-	 */
-	public function getTransport()
-	{
-		return $this->transport;
-	}
+    /**
+     * @return Transport
+     */
+    public function getTransport()
+    {
+        return $this->transport;
+    }
 
-	/**
-	 * @return AttributesNamespace
-	 */
-	public function attributes()
-	{
-		return $this->attributesNs;
-	}
+    /**
+     * @return AttributesNamespace
+     */
+    public function attributes()
+    {
+        return $this->attributesNs;
+    }
 
-	/**
-	 * @return CategoriesNamespace
-	 */
-	public function categories()
-	{
-		return $this->categoriesNs;
-	}
+    /**
+     * @return CategoriesNamespace
+     */
+    public function categories()
+    {
+        return $this->categoriesNs;
+    }
 
-	/**
-	 * @return ClaimMessagesNamespace
-	 */
-	public function claimMessages()
-	{
-		return $this->claimMessagesNs;
-	}
+    /**
+     * @return ClaimMessagesNamespace
+     */
+    public function claimMessages()
+    {
+        return $this->claimMessagesNs;
+    }
 
-	/**
-	 * @return ClaimsNamespace
-	 */
-	public function claims()
-	{
-		return $this->claimsNs;
-	}
+    /**
+     * @return ClaimsNamespace
+     */
+    public function claims()
+    {
+        return $this->claimsNs;
+    }
 
-	/**
-	 * @return ImportFilesNamespace
-	 */
-	public function importFiles()
-	{
-		return $this->importFilesNs;
-	}
+    /**
+     * @return ImportFilesNamespace
+     */
+    public function importFiles()
+    {
+        return $this->importFilesNs;
+    }
 
-	/**
-	 * @return ItemsNamespace
-	 */
-	public function items()
-	{
-		return $this->itemsNs;
-	}
+    /**
+     * @return ItemsNamespace
+     */
+    public function items()
+    {
+        return $this->itemsNs;
+    }
 
-	/**
-	 * @return OrdersNamespace
-	 */
-	public function orders()
-	{
-		return $this->ordersNs;
-	}
+    /**
+     * @return OrdersNamespace
+     */
+    public function orders()
+    {
+        return $this->ordersNs;
+    }
 
-	/**
-	 * @return OrderInvoicesNamespace
-	 */
-	public function orderInvoices()
-	{
-		return $this->orderInvoicesNs;
-	}
+    /**
+     * @return OrderInvoicesNamespace
+     */
+    public function orderInvoices()
+    {
+        return $this->orderInvoicesNs;
+    }
 
-	/**
-	 * @return OrderUnitsNamespace
-	 */
-	public function orderUnits()
-	{
-		return $this->orderUnitsNs;
-	}
+    /**
+     * @return OrderUnitsNamespace
+     */
+    public function orderUnits()
+    {
+        return $this->orderUnitsNs;
+    }
 
-	/**
-	 * @return ProductDataNamespace
-	 */
-	public function productData()
-	{
-		return $this->productDataNs;
-	}
+    /**
+     * @return ProductDataNamespace
+     */
+    public function productData()
+    {
+        return $this->productDataNs;
+    }
 
-	/**
-	 * @return ProductDataStatusNamespace
-	 */
-	public function productDataStatus()
-	{
-		return $this->productDataStatusNs;
-	}
+    /**
+     * @return ProductDataStatusNamespace
+     */
+    public function productDataStatus()
+    {
+        return $this->productDataStatusNs;
+    }
 
-	/**
-	 * @return ReportsNamespace
-	 */
-	public function reports()
-	{
-		return $this->reportsNs;
-	}
+    /**
+     * @return ReportsNamespace
+     */
+    public function reports()
+    {
+        return $this->reportsNs;
+    }
 
-	/**
-	 * @return ReturnsNamespace
-	 */
-	public function returns()
-	{
-		return $this->returnsNs;
-	}
+    /**
+     * @return ReturnsNamespace
+     */
+    public function returns()
+    {
+        return $this->returnsNs;
+    }
 
-	/**
-	 * @return ReturnUnitsNamespace
-	 */
-	public function returnUnits()
-	{
-		return $this->returnUnitsNs;
-	}
+    /**
+     * @return ReturnUnitsNamespace
+     */
+    public function returnUnits()
+    {
+        return $this->returnUnitsNs;
+    }
 
-	/**
-	 * @return ShipmentsNamespace
-	 */
-	public function shipments()
-	{
-		return $this->shipmentsNs;
-	}
+    /**
+     * @return ShipmentsNamespace
+     */
+    public function shipments()
+    {
+        return $this->shipmentsNs;
+    }
 
-	/**
-	 * @return ShippingGroupsNamespace
-	 */
-	public function shippingGroups()
-	{
-		return $this->shippingGroupsNs;
-	}
+    /**
+     * @return ShippingGroupsNamespace
+     */
+    public function shippingGroups()
+    {
+        return $this->shippingGroupsNs;
+    }
 
-	/**
-	 * @return StatusNamespace
-	 */
-	public function status()
-	{
-		return $this->statusNs;
-	}
+    /**
+     * @return StatusNamespace
+     */
+    public function status()
+    {
+        return $this->statusNs;
+    }
 
-	/**
-	 * @return SubscriptionsNamespace
-	 */
-	public function subscriptions()
-	{
-		return $this->subscriptionsNs;
-	}
+    /**
+     * @return SubscriptionsNamespace
+     */
+    public function subscriptions()
+    {
+        return $this->subscriptionsNs;
+    }
 
-	/**
-	 * @return ClaimMessagesNamespace
-	 */
-	public function ticketMessages()
-	{
-		return $this->claimMessagesNs;
-	}
+    /**
+     * @return ClaimMessagesNamespace
+     */
+    public function ticketMessages()
+    {
+        return $this->claimMessagesNs;
+    }
 
-	/**
-	 * @return TicketsNamespace
-	 */
-	public function tickets()
-	{
-		return $this->ticketsNs;
-	}
+    /**
+     * @return TicketsNamespace
+     */
+    public function tickets()
+    {
+        return $this->ticketsNs;
+    }
 
-	/**
-	 * @return WarehousesNamespace
-	 */
-	public function warehouses()
-	{
-		return $this->warehousesNs;
-	}
+    /**
+     * @return WarehousesNamespace
+     */
+    public function warehouses()
+    {
+        return $this->warehousesNs;
+    }
 
-	/**
-	 * @return UnitsNamespace
-	 */
-	public function units()
-	{
-		return $this->unitsNs;
-	}
+    /**
+     * @return UnitsNamespace
+     */
+    public function units()
+    {
+        return $this->unitsNs;
+    }
 }

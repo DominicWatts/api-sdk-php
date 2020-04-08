@@ -10,15 +10,15 @@ use Hitmeister\Component\Api\Endpoints\Traits\RequestPatch;
 
 class Close extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'tickets/%d/close/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'tickets/%d/close/';
+    }
 }

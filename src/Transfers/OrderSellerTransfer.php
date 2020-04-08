@@ -22,27 +22,27 @@ class OrderSellerTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_order' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'seller_units_count' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_units_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_order' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'seller_units_count' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_units_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

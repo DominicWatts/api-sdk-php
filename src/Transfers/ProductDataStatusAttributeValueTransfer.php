@@ -22,27 +22,27 @@ class ProductDataStatusAttributeValueTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'attribute' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'original_value' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'state' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'message' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'attribute' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'original_value' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'state' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'message' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

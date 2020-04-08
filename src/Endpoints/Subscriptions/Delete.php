@@ -19,15 +19,15 @@ use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
  */
 class Delete extends AbstractEndpoint implements IdAware
 {
-	use RequestDelete;
-	use UriPatternId;
-	use EmptyParamWhiteList;
+    use RequestDelete;
+    use UriPatternId;
+    use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'subscriptions/%d/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'subscriptions/%d/';
+    }
 }
