@@ -4,8 +4,8 @@ namespace Hitmeister\Component\Api\Namespaces;
 
 use Hitmeister\Component\Api\Endpoints\ProductData\Delete;
 use Hitmeister\Component\Api\Endpoints\ProductData\Get;
-use Hitmeister\Component\Api\Endpoints\ProductData\Upsert;
 use Hitmeister\Component\Api\Endpoints\ProductData\Update;
+use Hitmeister\Component\Api\Endpoints\ProductData\Upsert;
 use Hitmeister\Component\Api\Exceptions\ResourceNotFoundException;
 use Hitmeister\Component\Api\Namespaces\Traits\PerformWithId;
 use Hitmeister\Component\Api\Transfers\ProductDataTransfer;

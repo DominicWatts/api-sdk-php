@@ -20,10 +20,10 @@ use Hitmeister\Component\Api\Helper\Request;
 use Hitmeister\Component\Api\Helper\Response;
 use Hitmeister\Component\Api\Namespaces\Traits\PerformWithId;
 use Hitmeister\Component\Api\Transfers\ReportProductDataImportFileErrorsTransfer;
-use Hitmeister\Component\Api\Transfers\ReportRequestBookingsTransfer;
 use Hitmeister\Component\Api\Transfers\ReportRequestBookingsNewTransfer;
-use Hitmeister\Component\Api\Transfers\ReportRequestSalesTransfer;
+use Hitmeister\Component\Api\Transfers\ReportRequestBookingsTransfer;
 use Hitmeister\Component\Api\Transfers\ReportRequestSalesNewTransfer;
+use Hitmeister\Component\Api\Transfers\ReportRequestSalesTransfer;
 use Hitmeister\Component\Api\Transfers\ReportTransfer;
 
 /**

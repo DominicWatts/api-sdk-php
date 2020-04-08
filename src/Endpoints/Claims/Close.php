@@ -5,8 +5,8 @@ namespace Hitmeister\Component\Api\Endpoints\Claims;
 use Hitmeister\Component\Api\Endpoints\AbstractEndpoint;
 use Hitmeister\Component\Api\Endpoints\Interfaces\IdAware;
 use Hitmeister\Component\Api\Endpoints\Traits\EmptyParamWhiteList;
-use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 use Hitmeister\Component\Api\Endpoints\Traits\RequestPatch;
+use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 
 /**
  * Class Close

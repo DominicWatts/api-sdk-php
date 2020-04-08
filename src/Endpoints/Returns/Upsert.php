@@ -4,11 +4,11 @@ namespace Hitmeister\Component\Api\Endpoints\Returns;
 
 use Hitmeister\Component\Api\Endpoints\AbstractEndpoint;
 use Hitmeister\Component\Api\Endpoints\Interfaces\IdAware;
-use Hitmeister\Component\Api\Transfers\OrderUnitReturnTransfer;
-use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
-use Hitmeister\Component\Api\Endpoints\Traits\RequestPut;
-use Hitmeister\Component\Api\Endpoints\Traits\EmptyParamWhiteList;
 use Hitmeister\Component\Api\Endpoints\Traits\BodyTransfer;
+use Hitmeister\Component\Api\Endpoints\Traits\EmptyParamWhiteList;
+use Hitmeister\Component\Api\Endpoints\Traits\RequestPut;
+use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
+use Hitmeister\Component\Api\Transfers\OrderUnitReturnTransfer;
 
 class Upsert extends AbstractEndpoint implements IdAware
 {

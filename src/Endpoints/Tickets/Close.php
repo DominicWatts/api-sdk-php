@@ -5,8 +5,8 @@ namespace Hitmeister\Component\Api\Endpoints\Tickets;
 use Hitmeister\Component\Api\Endpoints\AbstractEndpoint;
 use Hitmeister\Component\Api\Endpoints\Interfaces\IdAware;
 use Hitmeister\Component\Api\Endpoints\Traits\EmptyParamWhiteList;
-use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 use Hitmeister\Component\Api\Endpoints\Traits\RequestPatch;
+use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 
 class Close extends AbstractEndpoint implements IdAware
 {
