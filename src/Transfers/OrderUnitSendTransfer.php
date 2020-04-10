@@ -20,17 +20,17 @@ class OrderUnitSendTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'carrier_code' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'tracking_number' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'carrier_code' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'tracking_number' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

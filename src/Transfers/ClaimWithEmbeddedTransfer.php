@@ -32,82 +32,82 @@ class ClaimWithEmbeddedTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_claim' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_buyer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'open_reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'callback_phone' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'is_seller_responsible' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'messages' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimMessageTransfer',
-  ),
-  'order_unit' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderUnitTransfer',
-  ),
-  'buyer' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\BuyerTransfer',
-  ),
-  'item' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
-  ),
-  'files' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimFileTransfer',
-  ),
-);
+        'id_claim' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_buyer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'open_reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'callback_phone' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'is_seller_responsible' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'messages' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimMessageTransfer',
+        ),
+        'order_unit' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderUnitTransfer',
+        ),
+        'buyer' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\BuyerTransfer',
+        ),
+        'item' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
+        ),
+        'files' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimFileTransfer',
+        ),
+        );
         return $properties;
     }
 

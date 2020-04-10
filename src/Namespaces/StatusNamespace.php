@@ -17,15 +17,15 @@ use Hitmeister\Component\Api\Transfers\StatusPingTransfer;
  */
 class StatusNamespace extends AbstractNamespace
 {
-	/**
-	 * @return StatusPingTransfer
-	 */
-	public function ping()
-	{
-		$endpoint = new Ping($this->getTransport());
-		$result = $endpoint->performRequest();
+    /**
+     * @return StatusPingTransfer
+     */
+    public function ping()
+    {
+        $endpoint = new Ping($this->getTransport());
+        $result = $endpoint->performRequest();
 
-		Response::checkBody($result);
-		return StatusPingTransfer::make($result['json']);
-	}
+        Response::checkBody($result);
+        return StatusPingTransfer::make($result['json']);
+    }
 }

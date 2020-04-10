@@ -21,22 +21,22 @@ class MessageClaimFileTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'filename' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'mime_type' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'data' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'filename' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'mime_type' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'data' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

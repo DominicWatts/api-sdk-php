@@ -21,24 +21,24 @@ use Hitmeister\Component\Api\Transfers\OrderUnitSendTransfer;
  */
 class Send extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param OrderUnitSendTransfer $transfer
-	 */
-	public function setTransfer(OrderUnitSendTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param OrderUnitSendTransfer $transfer
+     */
+    public function setTransfer(OrderUnitSendTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'order-units/%d/send/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'order-units/%d/send/';
+    }
 }

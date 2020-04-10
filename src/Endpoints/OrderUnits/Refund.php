@@ -12,24 +12,24 @@ use Hitmeister\Component\Api\Transfers\OrderUnitRefundTransfer;
 
 class Refund extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param OrderUnitRefundTransfer $transfer
-	 */
-	public function setTransfer(OrderUnitRefundTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param OrderUnitRefundTransfer $transfer
+     */
+    public function setTransfer(OrderUnitRefundTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'order-units/%d/refund/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'order-units/%d/refund/';
+    }
 }

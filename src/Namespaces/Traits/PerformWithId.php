@@ -18,24 +18,24 @@ use Hitmeister\Component\Api\Helper\Response;
  */
 trait PerformWithId
 {
-	/**
-	 * @param AbstractEndpoint $endpoint
-	 * @param int              $id
-	 * @return array|null
-	 */
-	protected function performWithId(AbstractEndpoint $endpoint, $id)
-	{
-		if ($endpoint instanceof IdAware) {
-			$endpoint->setId($id);
-		}
+    /**
+     * @param AbstractEndpoint $endpoint
+     * @param int              $id
+     * @return array|null
+     */
+    protected function performWithId(AbstractEndpoint $endpoint, $id)
+    {
+        if ($endpoint instanceof IdAware) {
+            $endpoint->setId($id);
+        }
 
-		try {
-			$result = $endpoint->performRequest();
-		} catch (ResourceNotFoundException $e) {
-			return null;
-		}
+        try {
+            $result = $endpoint->performRequest();
+        } catch (ResourceNotFoundException $e) {
+            return null;
+        }
 
-		Response::checkBody($result);
-		return $result['json'];
-	}
+        Response::checkBody($result);
+        return $result['json'];
+    }
 }

@@ -15,21 +15,21 @@ use Hitmeister\Component\Api\Exceptions\RuntimeException;
  */
 trait UriPatternId
 {
-	use IdSetterGetter;
+    use IdSetterGetter;
 
-	/**
-	 * @return string
-	 */
-	public function getURI()
-	{
-		if (empty($this->id)) {
-			throw new RuntimeException('Required params id is not set');
-		}
-		return sprintf($this->getUriPattern(), $this->id);
-	}
+    /**
+     * @return string
+     */
+    public function getURI()
+    {
+        if (empty($this->id)) {
+            throw new RuntimeException('Required params id is not set');
+        }
+        return sprintf($this->getUriPattern(), $this->id);
+    }
 
-	/**
-	 * @return string
-	 */
-	abstract protected function getUriPattern();
+    /**
+     * @return string
+     */
+    abstract protected function getUriPattern();
 }

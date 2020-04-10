@@ -20,66 +20,66 @@ use Hitmeister\Component\Api\Transfers\ItemWithEmbeddedTransfer;
  */
 class ItemsNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param string $q
-	 * @param array  $embedded
-	 * @param int    $limit
-	 * @param int    $offset
-	 * @return Cursor|ItemWithEmbeddedTransfer[]
-	 */
-	public function find($q, $embedded = null, $limit = 30, $offset = 0)
-	{
-		return $this->buildFind()
-			->addParam('q', $q)
-			->addParam('embedded', $embedded)
-			->setLimit($limit)
-			->setOffset($offset)
-			->find();
-	}
+    /**
+     * @param string $q
+     * @param array  $embedded
+     * @param int    $limit
+     * @param int    $offset
+     * @return Cursor|ItemWithEmbeddedTransfer[]
+     */
+    public function find($q, $embedded = null, $limit = 30, $offset = 0)
+    {
+        return $this->buildFind()
+            ->addParam('q', $q)
+            ->addParam('embedded', $embedded)
+            ->setLimit($limit)
+            ->setOffset($offset)
+            ->find();
+    }
 
-	/**
-	 * @param string $ean
-	 * @param array  $embedded
-	 * @return ItemWithEmbeddedTransfer|null
-	 */
-	public function findByEan($ean, array $embedded = null)
-	{
-		$list = $this->buildFind()
-			->addParam('ean', $ean)
-			->addParam('embedded', $embedded)
-			->find();
+    /**
+     * @param string $ean
+     * @param array  $embedded
+     * @return ItemWithEmbeddedTransfer|null
+     */
+    public function findByEan($ean, array $embedded = null)
+    {
+        $list = $this->buildFind()
+            ->addParam('ean', $ean)
+            ->addParam('embedded', $embedded)
+            ->find();
 
-		return $list->total() ? $list->current() : null;
-	}
+        return $list->total() ? $list->current() : null;
+    }
 
-	/**
-	 * @return FindBuilder
-	 */
-	public function buildFind()
-	{
-		$endpoint = new Find($this->getTransport());
-		return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\ItemWithEmbeddedTransfer');
-	}
+    /**
+     * @return FindBuilder
+     */
+    public function buildFind()
+    {
+        $endpoint = new Find($this->getTransport());
+        return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\ItemWithEmbeddedTransfer');
+    }
 
-	/**
-	 * @param int   $id
-	 * @param array $embedded
-	 * @return ItemWithEmbeddedTransfer|null
-	 */
-	public function get($id, array $embedded = [])
-	{
-		$endpoint = new Get($this->getTransport());
+    /**
+     * @param int   $id
+     * @param array $embedded
+     * @return ItemWithEmbeddedTransfer|null
+     */
+    public function get($id, array $embedded = [])
+    {
+        $endpoint = new Get($this->getTransport());
 
-		// Ask for embedded fields
-		if (!empty($embedded)) {
-			$endpoint->setParams([
-				'embedded' => $embedded,
-			]);
-		}
+        // Ask for embedded fields
+        if (!empty($embedded)) {
+            $endpoint->setParams([
+                'embedded' => $embedded,
+            ]);
+        }
 
-		$result = $this->performWithId($endpoint, $id);
-		return $result ? ItemWithEmbeddedTransfer::make($result) : null;
-	}
+        $result = $this->performWithId($endpoint, $id);
+        return $result ? ItemWithEmbeddedTransfer::make($result) : null;
+    }
 }

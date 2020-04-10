@@ -19,27 +19,28 @@ use Hitmeister\Component\Api\Transfers\ShippingGroupTransfer;
  */
 class ShippingGroupsNamespace extends AbstractNamespace
 {
-	use PerformWithId;
+    use PerformWithId;
 
-	/**
-	 * @param int $limit
-	 * @param int $offset
-	 *
-	 * @return Cursor|ShippingGroupTransfer[]
-	 */
-	public function find($limit = 20, $offset = 0) {
-		return $this->buildFind()
-			->setLimit($limit)
-			->setOffset($offset)
-			->find();
-	}
+    /**
+     * @param int $limit
+     * @param int $offset
+     *
+     * @return Cursor|ShippingGroupTransfer[]
+     */
+    public function find($limit = 20, $offset = 0)
+    {
+        return $this->buildFind()
+            ->setLimit($limit)
+            ->setOffset($offset)
+            ->find();
+    }
 
-	/**
-	 * @return FindBuilder
-	 */
-	public function buildFind()
-	{
-		$endpoint = new Find($this->getTransport());
-		return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\ShippingGroupTransfer');
-	}
+    /**
+     * @return FindBuilder
+     */
+    public function buildFind()
+    {
+        $endpoint = new Find($this->getTransport());
+        return new FindBuilder($endpoint, '\Hitmeister\Component\Api\Transfers\ShippingGroupTransfer');
+    }
 }

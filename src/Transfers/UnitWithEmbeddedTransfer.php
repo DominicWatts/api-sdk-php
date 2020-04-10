@@ -39,114 +39,114 @@ class UnitWithEmbeddedTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_item' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'condition' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'location' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'warehouse' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'amount' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_min' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_max' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'shipping_group' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'note' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'reference_price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'seller' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\SellerTransfer',
-  ),
-  'shipping_rate' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'date_inserted' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'date_lastchange' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'item' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
-  ),
-  'listing_price' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-  ),
-  'minimum_price' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-  ),
-  'id_offer' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-  ),
-);
+        'id_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_item' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'condition' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'location' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'warehouse' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'amount' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_min' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_max' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'shipping_group' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'note' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'reference_price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'seller' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\SellerTransfer',
+        ),
+        'shipping_rate' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'date_inserted' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'date_lastchange' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'item' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
+        ),
+        'listing_price' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        ),
+        'minimum_price' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        ),
+        'id_offer' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

@@ -19,23 +19,23 @@ use Hitmeister\Component\Api\Transfers\SubscriptionAddTransfer;
  */
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param SubscriptionAddTransfer $transfer
-	 */
-	public function setTransfer(SubscriptionAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param SubscriptionAddTransfer $transfer
+     */
+    public function setTransfer(SubscriptionAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'subscriptions/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'subscriptions/';
+    }
 }

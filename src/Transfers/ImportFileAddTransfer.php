@@ -20,17 +20,17 @@ class ImportFileAddTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'uri' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'type' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'uri' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'type' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

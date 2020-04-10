@@ -17,6 +17,6 @@ use Hitmeister\Component\Api\Endpoints\Traits\RequestPost;
  */
 abstract class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
+    use RequestPost;
+    use EmptyParamWhiteList;
 }

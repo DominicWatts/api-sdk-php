@@ -16,21 +16,21 @@ use Hitmeister\Component\Api\Transfers\ReportProductDataImportFileErrorsTransfer
  */
 class ProductDataImportErrors extends Post
 {
-	use BodyTransfer;
+    use BodyTransfer;
 
-	/**
-	 * @param ReportProductDataImportFileErrorsTransfer $transfer
-	 */
-	public function setTransfer(ReportProductDataImportFileErrorsTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param ReportProductDataImportFileErrorsTransfer $transfer
+     */
+    public function setTransfer(ReportProductDataImportFileErrorsTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'reports/product-data-import-file-errors/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'reports/product-data-import-file-errors/';
+    }
 }

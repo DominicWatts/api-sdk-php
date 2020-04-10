@@ -15,14 +15,14 @@ use Hitmeister\Component\Api\Transfers\AbstractTransfer;
  */
 trait TransferGetter
 {
-	/** @var AbstractTransfer */
-	protected $transfer;
+    /** @var AbstractTransfer */
+    protected $transfer;
 
-	/**
-	 * @return AbstractTransfer
-	 */
-	public function getTransfer()
-	{
-		return $this->transfer;
-	}
+    /**
+     * @return AbstractTransfer
+     */
+    public function getTransfer()
+    {
+        return $this->transfer;
+    }
 }

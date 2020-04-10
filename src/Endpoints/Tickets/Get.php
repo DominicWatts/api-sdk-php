@@ -10,15 +10,15 @@ use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 
 class Get extends AbstractEndpoint implements IdAware
 {
-	use RequestGet;
-	use UriPatternId;
-	use EmbeddedParamWhiteList;
+    use RequestGet;
+    use UriPatternId;
+    use EmbeddedParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'tickets/%d/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'tickets/%d/';
+    }
 }

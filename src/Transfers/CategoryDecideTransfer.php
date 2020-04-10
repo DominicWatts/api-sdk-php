@@ -22,28 +22,28 @@ class CategoryDecideTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'item' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemAddTransfer',
-  ),
-  'price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_category' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'keywords' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-);
+        'item' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemAddTransfer',
+        ),
+        'price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_category' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'keywords' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        );
         return $properties;
     }
 

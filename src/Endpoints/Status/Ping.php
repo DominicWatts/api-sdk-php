@@ -17,14 +17,14 @@ use Hitmeister\Component\Api\Endpoints\Traits\RequestGet;
  */
 class Ping extends AbstractEndpoint
 {
-	use RequestGet;
-	use EmptyParamWhiteList;
+    use RequestGet;
+    use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'status/ping/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'status/ping/';
+    }
 }

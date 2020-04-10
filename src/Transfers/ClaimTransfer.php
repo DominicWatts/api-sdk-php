@@ -27,52 +27,52 @@ class ClaimTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_claim' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_buyer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'open_reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'callback_phone' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'is_seller_responsible' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_claim' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_buyer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'open_reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'callback_phone' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'is_seller_responsible' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

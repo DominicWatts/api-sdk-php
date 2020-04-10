@@ -10,23 +10,23 @@ use Hitmeister\Component\Api\Transfers\OrderInvoiceAddTransfer;
 
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function setTransfer(OrderInvoiceAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function setTransfer(OrderInvoiceAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'order-invoices/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'order-invoices/';
+    }
 }

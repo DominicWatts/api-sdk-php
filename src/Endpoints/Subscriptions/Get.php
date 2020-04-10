@@ -19,15 +19,15 @@ use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
  */
 class Get extends AbstractEndpoint implements IdAware
 {
-	use RequestGet;
-	use UriPatternId;
-	use EmptyParamWhiteList;
+    use RequestGet;
+    use UriPatternId;
+    use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'subscriptions/%d/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'subscriptions/%d/';
+    }
 }

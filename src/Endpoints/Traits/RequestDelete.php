@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait RequestDelete
 {
-	/**
-	 * @return string
-	 */
-	public function getMethod()
-	{
-		return 'DELETE';
-	}
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return 'DELETE';
+    }
 }

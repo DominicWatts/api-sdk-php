@@ -23,33 +23,33 @@ class WarehouseTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_warehouse' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'name' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'address' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\WarehouseAddressTransfer',
-  ),
-  'is_pickup_possible' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'is_default' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_warehouse' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'name' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'address' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\WarehouseAddressTransfer',
+        ),
+        'is_pickup_possible' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'is_default' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

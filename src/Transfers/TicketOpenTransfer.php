@@ -21,22 +21,22 @@ class TicketOpenTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'message' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'message' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

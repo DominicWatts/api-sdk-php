@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Reports;
  */
 class AccountListing extends Post
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'reports/account-listing/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'reports/account-listing/';
+    }
 }

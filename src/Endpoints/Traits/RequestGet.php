@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait RequestGet
 {
-	/**
-	 * @return string
-	 */
-	public function getMethod()
-	{
-		return 'GET';
-	}
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return 'GET';
+    }
 }

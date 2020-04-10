@@ -19,23 +19,23 @@ use Hitmeister\Component\Api\Transfers\UnitAddTransfer;
  */
 class Post extends AbstractEndpoint
 {
-	use RequestPost;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPost;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param UnitAddTransfer $transfer
-	 */
-	public function setTransfer(UnitAddTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param UnitAddTransfer $transfer
+     */
+    public function setTransfer(UnitAddTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'units/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'units/';
+    }
 }

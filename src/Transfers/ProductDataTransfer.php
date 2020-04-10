@@ -28,58 +28,58 @@ class ProductDataTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'ean' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'title' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'category' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'additional_categories' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'description' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'short_description' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'mpn' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'list_price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'picture' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'additional_attributes' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AdditionalAttributeTransfer',
-  ),
-);
+        'ean' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'title' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'category' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'additional_categories' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'description' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'short_description' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'mpn' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'list_price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'picture' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'additional_attributes' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AdditionalAttributeTransfer',
+        ),
+        );
         return $properties;
     }
 

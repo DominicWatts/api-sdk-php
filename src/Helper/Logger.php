@@ -16,46 +16,46 @@ use Psr\Log\LogLevel;
  */
 class Logger
 {
-	/**
-	 * @param LoggerInterface $logger
-	 * @param array           $request
-	 * @param array           $response
-	 * @param \Exception|null $exception
-	 * @param string          $level
-	 * @codeCoverageIgnore
-	 */
-	public static function logState(LoggerInterface $logger, array $request, array $response, \Exception $exception = null, $level = LogLevel::INFO)
-	{
-		if (isset($request['body'])) {
-			static::log($logger, 'Request body', (array)$request['body'], LogLevel::DEBUG);
-		}
+    /**
+     * @param LoggerInterface $logger
+     * @param array           $request
+     * @param array           $response
+     * @param \Exception|null $exception
+     * @param string          $level
+     * @codeCoverageIgnore
+     */
+    public static function logState(LoggerInterface $logger, array $request, array $response, \Exception $exception = null, $level = LogLevel::INFO)
+    {
+        if (isset($request['body'])) {
+            static::log($logger, 'Request body', (array)$request['body'], LogLevel::DEBUG);
+        }
 
-		$message = (null === $exception ? 'Request success' : $exception->getMessage());
-		$context = [
-			'method'           => $request['http_method'],
-			'headers'          => $request['headers'],
-			'uri'              => $response['effective_url'],
-			'duration'         => $response['transfer_stats']['total_time'],
-			'status'           => $response['status'],
-			'response_headers' => isset($response['headers']) ? $response['headers'] : [],
-			'exception'        => ($exception ?: []),
-		];
+        $message = (null === $exception ? 'Request success' : $exception->getMessage());
+        $context = [
+            'method'           => $request['http_method'],
+            'headers'          => $request['headers'],
+            'uri'              => $response['effective_url'],
+            'duration'         => $response['transfer_stats']['total_time'],
+            'status'           => $response['status'],
+            'response_headers' => isset($response['headers']) ? $response['headers'] : [],
+            'exception'        => ($exception ?: []),
+        ];
 
-		static::log($logger, $message, $context, $level);
+        static::log($logger, $message, $context, $level);
 
-		if (isset($response['body'])) {
-			static::log($logger, 'Response body', (array)$response['body'], LogLevel::DEBUG);
-		}
-	}
+        if (isset($response['body'])) {
+            static::log($logger, 'Response body', (array)$response['body'], LogLevel::DEBUG);
+        }
+    }
 
-	/**
-	 * @param LoggerInterface $logger
-	 * @param string          $message
-	 * @param array           $context
-	 * @param string          $level
-	 */
-	protected static function log(LoggerInterface $logger, $message, array $context, $level)
-	{
-		$logger->log($level, 'Hitmeister API '.$message, $context);
-	}
+    /**
+     * @param LoggerInterface $logger
+     * @param string          $message
+     * @param array           $context
+     * @param string          $level
+     */
+    protected static function log(LoggerInterface $logger, $message, array $context, $level)
+    {
+        $logger->log($level, 'Hitmeister API '.$message, $context);
+    }
 }

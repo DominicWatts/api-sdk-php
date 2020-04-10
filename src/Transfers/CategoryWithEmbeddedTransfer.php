@@ -34,91 +34,91 @@ class CategoryWithEmbeddedTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_category' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'name' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_parent_category' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'title_singular' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'title_plural' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'level' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'url' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'shipping_category' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'variable_fee' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'fixed_fee' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'vat' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'real_main_category_id' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'parent' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\CategoryTransfer',
-  ),
-  'children' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\CategoryTransfer',
-  ),
-  'optional_attributes' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AttributeTransfer',
-  ),
-  'mandatory_attributes' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AttributeTransfer',
-  ),
-);
+        'id_category' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'name' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_parent_category' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'title_singular' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'title_plural' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'level' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'url' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'shipping_category' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'variable_fee' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'fixed_fee' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'vat' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'real_main_category_id' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'parent' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\CategoryTransfer',
+        ),
+        'children' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\CategoryTransfer',
+        ),
+        'optional_attributes' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AttributeTransfer',
+        ),
+        'mandatory_attributes' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AttributeTransfer',
+        ),
+        );
         return $properties;
     }
 

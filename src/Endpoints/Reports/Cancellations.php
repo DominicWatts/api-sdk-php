@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Reports;
  */
 class Cancellations extends Post
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'reports/cancellations/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'reports/cancellations/';
+    }
 }

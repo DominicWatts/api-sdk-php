@@ -5,8 +5,8 @@ namespace Hitmeister\Component\Api\Endpoints\Claims;
 use Hitmeister\Component\Api\Endpoints\AbstractEndpoint;
 use Hitmeister\Component\Api\Endpoints\Interfaces\IdAware;
 use Hitmeister\Component\Api\Endpoints\Traits\EmptyParamWhiteList;
-use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 use Hitmeister\Component\Api\Endpoints\Traits\RequestPatch;
+use Hitmeister\Component\Api\Endpoints\Traits\UriPatternId;
 
 /**
  * Class Close
@@ -19,15 +19,15 @@ use Hitmeister\Component\Api\Endpoints\Traits\RequestPatch;
  */
 class Close extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'claims/%d/close/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'claims/%d/close/';
+    }
 }

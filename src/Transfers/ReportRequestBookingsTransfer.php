@@ -20,17 +20,17 @@ class ReportRequestBookingsTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'date_from' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'date_to' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'date_from' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'date_to' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

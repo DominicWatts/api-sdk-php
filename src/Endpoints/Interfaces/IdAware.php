@@ -4,13 +4,13 @@ namespace Hitmeister\Component\Api\Endpoints\Interfaces;
 
 interface IdAware
 {
-	/**
-	 * @param int $id
-	 */
-	public function setId($id);
+    /**
+     * @param int $id
+     */
+    public function setId($id);
 
-	/**
-	 * @return int
-	 */
-	public function getId();
+    /**
+     * @return int
+     */
+    public function getId();
 }

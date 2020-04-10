@@ -13,22 +13,22 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait IdSetterGetter
 {
-	/** @var int|string */
-	protected $id;
+    /** @var int|string */
+    protected $id;
 
-	/**
-	 * @param int|string $id
-	 */
-	public function setId($id)
-	{
-		$this->id = $id;
-	}
+    /**
+     * @param int|string $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
-	/**
-	 * @return int|string
-	 */
-	public function getId()
-	{
-		return $this->id;
-	}
+    /**
+     * @return int|string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }

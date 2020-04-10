@@ -25,47 +25,47 @@ class OrderWithEmbeddedTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_order' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'billing_address' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
-  ),
-  'buyer' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\BuyerTransfer',
-  ),
-  'seller_units' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderUnitTransfer',
-  ),
-  'shipping_address' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
-  ),
-  'order_invoices' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderInvoiceTransfer',
-  ),
-);
+        'id_order' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'billing_address' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
+        ),
+        'buyer' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\BuyerTransfer',
+        ),
+        'seller_units' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderUnitTransfer',
+        ),
+        'shipping_address' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
+        ),
+        'order_invoices' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\OrderInvoiceTransfer',
+        ),
+        );
         return $properties;
     }
 

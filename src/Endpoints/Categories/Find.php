@@ -7,29 +7,29 @@ use Hitmeister\Component\Api\Endpoints\Traits\RequestGet;
 
 class Find extends AbstractEndpoint
 {
-	use RequestGet;
+    use RequestGet;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getParamWhiteList()
-	{
-		return ['q', 'id_parent', 'limit', 'offset'];
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getParamWhiteList()
+    {
+        return ['q', 'id_parent', 'limit', 'offset'];
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'categories/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'categories/';
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getApiLimit()
-	{
-		return 1000;
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getApiLimit()
+    {
+        return 1000;
+    }
 }

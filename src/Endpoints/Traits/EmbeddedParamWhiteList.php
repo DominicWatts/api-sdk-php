@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait EmbeddedParamWhiteList
 {
-	/**
-	 * @return array
-	 */
-	public function getParamWhiteList()
-	{
-		return ['embedded'];
-	}
+    /**
+     * @return array
+     */
+    public function getParamWhiteList()
+    {
+        return ['embedded'];
+    }
 }

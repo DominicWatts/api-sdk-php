@@ -16,21 +16,21 @@ use Hitmeister\Component\Api\Endpoints\Traits\RequestGet;
  */
 class Find extends AbstractEndpoint
 {
-	use RequestGet;
+    use RequestGet;
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getParamWhiteList()
-	{
-		return ['event_name', 'limit', 'offset'];
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getParamWhiteList()
+    {
+        return ['event_name', 'limit', 'offset'];
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function getURI()
-	{
-		return 'subscriptions/seller/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    public function getURI()
+    {
+        return 'subscriptions/seller/';
+    }
 }

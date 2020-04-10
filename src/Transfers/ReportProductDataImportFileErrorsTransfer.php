@@ -19,12 +19,12 @@ class ReportProductDataImportFileErrorsTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_import_file' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'id_import_file' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

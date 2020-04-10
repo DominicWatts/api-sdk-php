@@ -14,7 +14,8 @@ class Post extends AbstractEndpoint
     use EmptyParamWhiteList;
     use BodyTransfer;
 
-    public function setTransfer(TicketOpenTransfer $transfer) {
+    public function setTransfer(TicketOpenTransfer $transfer)
+    {
         $this->transfer = $transfer;
     }
 

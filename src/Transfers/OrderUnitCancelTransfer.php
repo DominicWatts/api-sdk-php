@@ -19,12 +19,12 @@ class OrderUnitCancelTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

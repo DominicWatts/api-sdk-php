@@ -21,24 +21,24 @@ use Hitmeister\Component\Api\Transfers\OrderUnitCancelTransfer;
  */
 class Cancel extends AbstractEndpoint implements IdAware
 {
-	use RequestPatch;
-	use UriPatternId;
-	use EmptyParamWhiteList;
-	use BodyTransfer;
+    use RequestPatch;
+    use UriPatternId;
+    use EmptyParamWhiteList;
+    use BodyTransfer;
 
-	/**
-	 * @param OrderUnitCancelTransfer $transfer
-	 */
-	public function setTransfer(OrderUnitCancelTransfer $transfer)
-	{
-		$this->transfer = $transfer;
-	}
+    /**
+     * @param OrderUnitCancelTransfer $transfer
+     */
+    public function setTransfer(OrderUnitCancelTransfer $transfer)
+    {
+        $this->transfer = $transfer;
+    }
 
-	/**
-	 * {@inheritdoc}
-	 */
-	protected function getUriPattern()
-	{
-		return 'order-units/%d/cancel/';
-	}
+    /**
+     * {@inheritdoc}
+     */
+    protected function getUriPattern()
+    {
+        return 'order-units/%d/cancel/';
+    }
 }

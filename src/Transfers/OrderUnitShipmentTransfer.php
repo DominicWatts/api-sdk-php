@@ -20,18 +20,18 @@ class OrderUnitShipmentTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'shipment_information' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ShipmentInformationTransfer',
-  ),
-);
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'shipment_information' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ShipmentInformationTransfer',
+        ),
+        );
         return $properties;
     }
 

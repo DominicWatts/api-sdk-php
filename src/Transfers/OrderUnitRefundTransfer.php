@@ -20,17 +20,17 @@ class OrderUnitRefundTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'amount' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-);
+        'amount' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        );
         return $properties;
     }
 

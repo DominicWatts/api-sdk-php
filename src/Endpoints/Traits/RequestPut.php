@@ -13,11 +13,11 @@ namespace Hitmeister\Component\Api\Endpoints\Traits;
  */
 trait RequestPut
 {
-	/**
-	 * @return string
-	 */
-	public function getMethod()
-	{
-		return 'PUT';
-	}
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return 'PUT';
+    }
 }

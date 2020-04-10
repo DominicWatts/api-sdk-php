@@ -44,145 +44,145 @@ class OrderUnitWithEmbeddedTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'id_order_unit' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_order' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_created' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'ts_updated' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'price' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_offer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'revenue_gross' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'revenue_net' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'note' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'unit_condition' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_min' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_max' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'delivery_time_expires' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'shipping_rate' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'cancel_reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'vat' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'buyer' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\BuyerTransfer',
-  ),
-  'claim' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimTransfer',
-  ),
-  'billing_address' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
-  ),
-  'shipping_address' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
-  ),
-  'invoice' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\InvoiceTransfer',
-  ),
-  'item' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
-  ),
-  'tickets' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\TicketTransfer',
-  ),
-  'return_unit' => 
-  array (
-    'embedded' => true,
-    'is_multiple' => false,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ReturnUnitTransfer',
-  ),
-);
+        'id_order_unit' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_order' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_created' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'ts_updated' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'price' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_offer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'revenue_gross' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'revenue_net' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'note' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'unit_condition' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_min' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_max' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'delivery_time_expires' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'shipping_rate' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'cancel_reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'vat' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'buyer' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\BuyerTransfer',
+        ),
+        'claim' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ClaimTransfer',
+        ),
+        'billing_address' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
+        ),
+        'shipping_address' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\AddressTransfer',
+        ),
+        'invoice' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\InvoiceTransfer',
+        ),
+        'item' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ItemTransfer',
+        ),
+        'tickets' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\TicketTransfer',
+        ),
+        'return_unit' =>
+        array (
+        'embedded' => true,
+        'is_multiple' => false,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ReturnUnitTransfer',
+        ),
+        );
         return $properties;
     }
 

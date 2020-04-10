@@ -27,53 +27,53 @@ class ProductDataStatusTransfer extends AbstractTransfer
     public function getProperties()
     {
         static $properties = array (
-  'item_ready' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'item_not_ready_reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'id_item' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'item_quality' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'missing_attributes' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'min_one_missing_attributes' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-  ),
-  'update_status' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'update_fail_reason' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => false,
-  ),
-  'attribute_values' => 
-  array (
-    'embedded' => false,
-    'is_multiple' => true,
-    'type' => 'Hitmeister\\Component\\Api\\Transfers\\ProductDataStatusAttributeValueTransfer',
-  ),
-);
+        'item_ready' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'item_not_ready_reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'id_item' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'item_quality' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'missing_attributes' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'min_one_missing_attributes' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        ),
+        'update_status' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'update_fail_reason' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => false,
+        ),
+        'attribute_values' =>
+        array (
+        'embedded' => false,
+        'is_multiple' => true,
+        'type' => 'Hitmeister\\Component\\Api\\Transfers\\ProductDataStatusAttributeValueTransfer',
+        ),
+        );
         return $properties;
     }
 
